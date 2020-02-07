@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/          //validates email
 );
 
 const formValid = ({ formErrors, ...rest }) => {
@@ -92,10 +92,10 @@ class App extends Component {
       <div className="wrapper">
         <div className="form-wrapper">
           <h1>Create Account</h1>
-          <form onSubmit={this.handleSubmit} noValidate>
+          <form onSubmit={this.handleSubmit} noValidate>                  
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
-              <input
+              <input                                                                //input for firstname
                 className={formErrors.firstName.length > 0 ? "error" : null}
                 placeholder="First Name"
                 type="text"
@@ -110,7 +110,7 @@ class App extends Component {
             <div className="lastName">
               <label htmlFor="lastName">Last Name</label>
               <input
-                className={formErrors.lastName.length > 0 ? "error" : null}
+                className={formErrors.lastName.length > 0 ? "error" : null}               //input for lastname
                 placeholder="Last Name"
                 type="text"
                 name="lastName"
@@ -122,7 +122,7 @@ class App extends Component {
               )}
             </div>
             <div className="email">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email</label>                                //input for email
               <input
                 className={formErrors.email.length > 0 ? "error" : null}
                 placeholder="Email"
@@ -138,7 +138,7 @@ class App extends Component {
             <div className="password">
               <label htmlFor="password">Password</label>
               <input
-                className={formErrors.password.length > 0 ? "error" : null}
+                className={formErrors.password.length > 0 ? "error" : null}             //input for password
                 placeholder="Password"
                 type="password"
                 name="password"
